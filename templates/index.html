@@ -6,12 +6,15 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../static/style.css">
-   <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+   <!-- <link rel="stylesheet" href="../static/style.css"> -->
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
    <title>House Price Prediction</title>
 </head>
 
 <body>
+   <center>
+      <h2 class="prediction_text">{{ prediction_text }}</h2>
+   </center>
    <form action="/predict" method="post">
       <center>
          <h2>Please enter the properties of the house you want to estimate</h2>
@@ -32,7 +35,7 @@
          <label for="households">Estimated number of people that can live in this house: </label>
          <input type="text" name="households" id="households">
 
-         <label for="income">Estimated income of number of people living the house: </label>
+         <label for="income">Estimated income of number of people living the house in dollars: </label>
          <input type="text" name="income" id="income">
 
          <label for="longitude">Longitude: </label>
@@ -46,7 +49,7 @@
             <select name="ocean-proximity" id="ocean-proximity">
                <option value="near_bay">Near bay</option>
                <option value="less_than_hundred_mile_to_ocean">Less than hundred miles to ocean</option>
-               <option value="near ocean">Near ocean</option>
+               <option value="near_ocean">Near ocean</option>
                <option value="inland">Inland</option>
             </select>
          </div>
