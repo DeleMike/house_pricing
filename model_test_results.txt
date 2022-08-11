@@ -1,0 +1,16 @@
+near bay - $274470.0625
+<1h_ocean - $285093.09375
+near-ocean - $279814.65625
+inland - $162184.6875
+
+I tested for the same values for the four different areas:
+age = 18
+total_rooms = 3
+total_bedrooms  = 1
+people_in_area = 20
+people_in_house = 2
+average_income_of_house_members = $80000 dollars ----per year
+longitude = -100
+latitude = 21
+
+Seems living hundred miles away from the ocean cost more. Best guess is that it is more safe, nice view and maybe calibre of people staying around here.
