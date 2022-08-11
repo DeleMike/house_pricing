@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../static/style.css">
+   <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+   <title>House Price Prediction</title>
+</head>
+
+<body>
+   <form action="/predict" method="post">
+      <center>
+         <h2>Please enter the properties of the house you want to estimate</h2>
+      </center>
+      <div class="house-details">
+         <label for="age">Average age of house: </label>
+         <input type="text" name="age" id="age">
+
+         <label for="rooms">Total number of rooms: </label>
+         <input type="text" name="rooms" id="rooms">
+
+         <label for="total_bedrooms">Total number of bedrooms: </label>
+         <input type="text" name="total_bedrooms" id="total_bedrooms">
+
+         <label for="population">Estimated number of people living around the area: </label>
+         <input type="text" name="population" id="population">
+
+         <label for="households">Estimated number of people that can live in this house: </label>
+         <input type="text" name="households" id="households">
+
+         <label for="income">Estimated income of number of people living the house: </label>
+         <input type="text" name="income" id="income">
+
+         <label for="longitude">Longitude: </label>
+         <input type="text" name="longitude" id="longitude" placeholder="Enter a range between -124 and -114">
+
+         <label for="latitude">Latitude: </label>
+         <input type="text" name="latitude" id="latitude" placeholder="Enter a range between 31 and 42">
+
+         <div class="block ocean-proximity">
+            <label for="ocean-proximity"><label for="ocean-proximity">Ocean Proximity: </label>
+            <select name="ocean-proximity" id="ocean-proximity">
+               <option value="near_bay">Near bay</option>
+               <option value="less_than_hundred_mile_to_ocean">Less than hundred miles to ocean</option>
+               <option value="near ocean">Near ocean</option>
+               <option value="inland">Inland</option>
+            </select>
+         </div>
+
+      </div>
+      <center>
+         <button type="submit">Submit form</button>
+      </center>
+
+   </form>
+
+</body>
+
+</html>
